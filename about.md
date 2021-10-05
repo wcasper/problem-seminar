@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-This is the website for the CSUF Virtual Geometry Seminar.
+This is the website for the CSUF Problem Solving Seminar.
 
