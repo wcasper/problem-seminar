@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 Gentoo Linux) (preloaded format=pdflatex 2021.7.21)  18 FEB 2022 14:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 Gentoo Linux) (preloaded format=pdflatex 2022.4.8)  12 APR 2022 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -422,27 +422,27 @@ Package pdftex.def Info: Oscar.jpg  used on input line 72.
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 113.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 114.
 
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-127.
+128.
 (/usr/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-127.
+128.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-127.
+128.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-127.
+128.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -461,8 +461,8 @@ ed.
  ) 
 Here is how much of TeX's memory you used:
  10820 strings out of 480954
- 164277 string characters out of 5908242
- 667845 words of memory out of 5000000
+ 164277 string characters out of 5908243
+ 668845 words of memory out of 5000000
  27820 multiletter control sequences out of 15000+600000
  416499 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -473,7 +473,7 @@ c/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb>
-Output written on problem_flyer-spring-2022.pdf (1 page, 3462494 bytes).
+Output written on problem_flyer-spring-2022.pdf (1 page, 3462598 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
