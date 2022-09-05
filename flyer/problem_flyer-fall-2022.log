@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 Gentoo Linux) (preloaded format=pdflatex 2022.6.16)  22 AUG 2022 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 Gentoo Linux) (preloaded format=pdflatex 2022.6.16)  7 SEP 2020 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -399,22 +399,49 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<SanAntonio.jpg, id=5, 3982.88pt x 2240.37pt>
+<SanAntonio.jpg, id=4, 3982.88pt x 2240.37pt>
 File: SanAntonio.jpg Graphic file (type jpg)
 <use SanAntonio.jpg>
 Package pdftex.def Info: SanAntonio.jpg  used on input line 37.
 (pdftex.def)             Requested size: 241.3788pt x 135.74962pt.
-<Ben.jpg, id=6, 1593.152pt x 896.148pt>
+<Ben.jpg, id=5, 1593.152pt x 896.148pt>
 File: Ben.jpg Graphic file (type jpg)
 <use Ben.jpg>
 Package pdftex.def Info: Ben.jpg  used on input line 40.
 (pdftex.def)             Requested size: 241.3788pt x 135.77013pt.
-<csuf_seal.png, id=7, 1204.5pt x 1204.5pt>
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+63.
+(/usr/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+63.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+63.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+63.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zplm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<csuf_seal.png, id=6, 1204.5pt x 1204.5pt>
 File: csuf_seal.png Graphic file (type png)
 <use csuf_seal.png>
 Package pdftex.def Info: csuf_seal.png  used on input line 65.
 (pdftex.def)             Requested size: 132.75906pt x 132.75272pt.
-<Oscar.jpg, id=9, 4047.12pt x 3035.34pt>
+<Oscar.jpg, id=8, 4047.12pt x 3035.34pt>
 File: Oscar.jpg Graphic file (type jpg)
 <use Oscar.jpg>
 Package pdftex.def Info: Oscar.jpg  used on input line 72.
@@ -424,33 +451,6 @@ LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 116.
 
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-129.
-(/usr/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
-File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-129.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/omszplm.fd
-File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-129.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
-File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-129.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
-File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zplm' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Oscar.jpg> <./SanAntonio
@@ -460,23 +460,24 @@ Package rerunfilecheck Info: File `problem_flyer-fall-2022.out' has not changed
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10820 strings out of 480954
- 164247 string characters out of 5908242
+ 10827 strings out of 480954
+ 164311 string characters out of 5908242
  667841 words of memory out of 5000000
  27820 multiletter control sequences out of 15000+600000
- 416499 words of font info for 97 fonts, out of 8000000 for 9000
+ 417385 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,8n,75p,261b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,8n,75p,261b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb>
-Output written on problem_flyer-fall-2022.pdf (1 page, 3461115 bytes).
+exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type
+1/urw/palatino/uplr8a.pfb>
+Output written on problem_flyer-fall-2022.pdf (1 page, 3471139 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 32283 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 34331 words of extra memory for PDF output out of 35830 (max. 10000000)
 
