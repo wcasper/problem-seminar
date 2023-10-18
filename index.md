@@ -13,7 +13,9 @@ title: CSUF Problem Solving Seminar
 
 **Contact Email:** [wcasper@fullerton.edu](mailto:wcasper@fullerton.edu)
 
-**Talk Schedule:** TBA
+**Talk Schedule:** [Link to talk schedule](https://www.fullerton.edu/math/seminars/Problem%20Seminar.php)
+
+**Zoom link:** Talks are in person, but we are currently testing streaming the seminar.  Join **933-919-1166** to view the stream.
 
 **Introduction:**
 
