@@ -13,9 +13,7 @@ title: CSUF Problem Solving Seminar
 
 **Contact Email:** [wcasper@fullerton.edu](mailto:wcasper@fullerton.edu)
 
-**Talk Schedule:** A schedule of talks can be found [here (link)](flyer/problem_flyer-fall-2022.pdf)
-
-**Zoom number:** 898-0346-2987
+**Talk Schedule:** TBA
 
 **Introduction:**
 
