@@ -1,0 +1,479 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+% MODIFIED by Jonathan Kew, 2008-07-06
+% The header comments and encoding in this file were modified for inclusion with TeXworks.
+% The content is otherwise unchanged from the original distributed with the beamer package.
+
+\documentclass{beamer}
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+%  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage{hyperref}
+\usepackage{amsmath,amsthm}
+
+\newtheorem{prob}{Problem}
+\newtheorem{soln}{Solution}
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+
+\title{The Roots of Problems}
+
+\author[W.R. Casper] % (optional, use only with lots of authors)
+{W.R. Casper\\\vspace{0.2in}
+ {\tiny Problem Solving Seminar}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[California State University Fullerton] % (optional, but mostly needed)
+{
+  Department of Mathematics\\
+  California State University Fullerton}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+  %\tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+% Since this a solution template for a generic talk, very little can
+% be said about how it should be structured. However, the talk length
+% of between 15min and 45min and the theme suggest that you stick to
+% the following rules:  
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+\begin{frame}{Roots of polynomials}
+A \textbf{root} of a polynomial $f(x)$ is a solution of the equation $f(x) = 0$.\\
+\pause
+\textbf{TYPES OF QUESTIONS:}
+\begin{itemize}
+\pause
+\item where are the roots? (interval, region of complex plane, $\dots$)
+\pause
+\item how many real roots? (total, or in a certain interval)
+\pause
+\item given coefficients, evaluate an expression involving the roots
+\pause
+\item given the roots, evaluate an expressin involving the coefficients
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{prob}
+Let $r_1$, $r_2$, $r_3$, and $r_4$ be the roots of the polynomial
+$$f(x) = 5x^4 - 7x^3 + x^2 -x + 9.$$
+Calculate
+$$r_1 + r_2 + r_3 + r_4$$
+\end{prob}
+\pause
+\begin{soln}
+\pause
+$f(x) = 5(x-r_1)(x-r_2)(x-r_3)(x-r_4)$
+\pause
+{\small
+\begin{align*}
+f(x)
+  & = 5x^4 - 5x^3(r_1+r_2+r_3+r_4)\\
+  & + 5x^2(r_1r_2+r_1r_3+r_2r_4+r_2r_3+r_2r_4+_3r_4)\\
+  & - 5x(r_1r_2r_3+r_1r_2r_4+r_1r_3r_4+r_2r_3r_4) + 5r_1r_2r_3r_4.
+\end{align*}
+}
+\pause
+$$r_1 + r_2 + r_3 + r_4 = \frac{7}{5}.$$
+\end{soln}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{prob}
+Let $r_1$, $r_2$, $r_3$, and $r_4$ be the roots of the polynomial
+$$f(x) = 5x^4 - 7x^3 + x^2 -x + 9.$$
+Calculate
+$$r_1r_2r_3r_4$$
+\end{prob}
+\pause
+\begin{soln}
+\pause
+$f(x) = 5(x-r_1)(x-r_2)(x-r_3)(x-r_4)$
+\pause
+{\small
+\begin{align*}
+f(x)
+  & = 5x^4 - 5x^3(r_1+r_2+r_3+r_4)\\
+  & + 5x^2(r_1r_2+r_1r_3+r_2r_4+r_2r_3+r_2r_4+_3r_4)\\
+  & - 5x(r_1r_2r_3+r_1r_2r_4+r_1r_3r_4+r_2r_3r_4) + 5r_1r_2r_3r_4.
+\end{align*}
+}
+\pause
+$$r_1r_2r_3r_4 = \frac{9}{5}.$$
+\end{soln}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{prob}
+Let $r_1$, $r_2$, $r_3$, and $r_4$ be the roots of the polynomial
+$$f(x) = 5x^4 - 7x^3 + x^2 -x + 9.$$
+Calculate
+$$\frac{1}{r_1+2}\frac{1}{r_2+2}\frac{1}{r_3+2}\frac{1}{r_4+2}$$
+\end{prob}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{solution}
+\pause
+$$g(x)  = f(x-2)$$
+\pause
+$$g(x)  = 5(x-2)^4 - 7(x-2)^3 + (x-2)^2 - (x-2) + 9$$
+\pause
+$$g(x)  = 5x^4 - 47x^3 + 163x^2 - 249x + 151$$
+\pause
+has roots $r_1+2$, $r_2+2$, $r_3+2$, and $r_4+2$.
+\end{solution}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{solution}
+\pause
+$$h(x) = x^4g(x^{-1})$$
+\pause
+$$h(x) = 151x^4 - 249x^3 + 163x^2 - 47x + 5$$
+\pause
+has roots $\frac{1}{r_1+2}$, $\frac{1}{r_2+2}$, $\frac{1}{r_3+2}$, and $\frac{1}{r_4+2}$.
+\end{solution}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{solution}
+$$h(x) = 151x^4 - 249x^3 + 163x^2 - 47x + 5$$
+\pause
+{\small
+$$h(x) = 151\left(x-\frac{1}{r_1+2}\right)\left(x-\frac{1}{r_2+2}\right)\left(x-\frac{1}{r_3+2}\right)\left(x-\frac{1}{r_4+2}\right).$$
+}
+\pause
+$$h(0) = 151\frac{1}{r_1+2}\frac{1}{r_2+2}\frac{1}{r_3+2}\frac{1}{r_4+2}.$$
+\pause
+$$5    = 151\frac{1}{r_1+2}\frac{1}{r_2+2}\frac{1}{r_3+2}\frac{1}{r_4+2}.$$
+\pause
+$$\frac{1}{r_1+2}\frac{1}{r_2+2}\frac{1}{r_3+2}\frac{1}{r_4+2} = \frac{5}{151}.$$
+\end{solution}
+\end{frame}
+
+\begin{frame}{Putnam 1951 B6}
+\begin{prob}
+Suppose that $f(x) = x^3 + ax^2 + bx + c$ has three real roots $r_1,r_2,r_3$ with $r_1 \leq r_2 \leq r_3$.
+Show that
+$$\sqrt{a^2-3b}\leq r_3-r_1\leq \frac{2}{\sqrt{3}}\sqrt{a^2-3b}$$
+
+\end{prob}
+\end{frame}
+
+\begin{frame}{Putnam 1951 B6}
+\begin{soln}
+\pause
+\begin{align*}
+f(x)
+ & = x^3+ax^2+bx+c\\
+ & = (x-r_1)(x-r_2)(x-r_3)\\
+ & = x^3 - (r_1+r_2+r_3)x^2 + (r_1r_2 + r_1r_3 + r_2r_3)x - r_1r_2r_3.
+\end{align*}
+\pause
+From this we see
+\begin{align*}
+a^2-3b
+  & = r_1^2+r_2^2+r_3^2-(r_1r_2+r_1r_3+r_2r_3)\\
+  & = \frac{1}{2}(r_2-r_1)^2+ \frac{1}{2}(r_3-r_2)^2+ \frac{1}{2}(r_3-r_1)^2\\
+  & = (r_3-r_1)^2 -(r_3-r_2)(r_2-r_1)
+\end{align*}
+\end{soln}
+\end{frame}
+
+\begin{frame}{Putnam 1951 B6}
+\begin{soln}
+The \textbf{AM-GM inequality} says:
+$$\sqrt{AB}\leq \frac{A+B}{2}.$$
+\pause
+Therefore
+$$0\leq (r_3-r_2)(r_2-r_1) \leq \left(\frac{(r_3-r_2) + (r_2-r_1)}{2}\right)^2 = \left(\frac{r_3-r_1}{2}\right)^2$$
+\pause
+$$-\left(\frac{r_3-r_1}{2}\right)^2\leq -(r_3-r_2)(r_2-r_1) \leq 0$$
+\pause
+$$\frac{3}{4}(r_3-r_1)^2 \leq (r_3-r_1)^2-(r_3-r_2)(r_2-r_1) \leq (r_3-r_1)^2 $$
+\end{soln}
+\end{frame}
+
+\begin{frame}{Putnam 1951 B6}
+\begin{soln}
+Since 
+$$a^2-3b  = (r_3-r_1)^2 -(r_3-r_2)(r_2-r_1)$$
+\pause
+This gives
+$$\frac{3}{4}(r_3-r_1)^2 \leq a^2-3b \leq (r_3-r_1)^2 $$
+\pause
+Therefore
+$$\sqrt{a^2-3b} \leq r_3-r_1,$$
+\pause
+and also
+$$r_3-r_1 \leq \frac{2}{\sqrt{3}}\sqrt{a^2-3b}.$$
+\end{soln}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{prob}
+Show that the polynomial
+$$f(x) = x^3 + 4x + 1$$
+has at least one real root.
+\end{prob}
+\pause
+\begin{soln}
+$f(1) = 6$ and $f(-1) = -4$, so the \textbf{Intermediate Value Theorem} says that there is a value $x$ between $6$ and $-1$ with $f(x) = 0$.
+\end{soln}
+\end{frame}
+
+\begin{frame}{Warm-up problem}
+\begin{prob}
+Show that the polynomial
+$$f(x) = x^3 + 4x + 1$$
+has at exactly one real root.
+\end{prob}
+\pause
+\begin{soln}
+Note that $f'(x) = 3x^2 + 4 > 0$.\\
+\pause
+Suppose $f(x)$ has at least two roots at $x=r_1$ and $x = r_2$.\\
+\pause
+If $r_1=r_2$, then $f'(r_1) = 0$, which we know is impossible.\\
+\pause
+If $r_1\neq r_2$, then \textbf{Rolle's Theorem} or the \textbf{Mean Value Theorem} implies that there is a point $x$ between $r_1$ and $r_2$ with $f'(x) = 0$, which is also impossible.\\
+\pause
+Therefore $f(x)$ has no more than one root.
+\end{soln}
+\end{frame}
+
+
+\begin{frame}{Putnam 2015 B1}
+\begin{prob}
+Suppose that $f(x)$ has five distinct real roots. 
+Show that
+$$f(x) + 6f'(x) + 12f''(x) + 8f'''(x)$$
+has at least two distint real roots.
+\end{prob}
+\pause
+Hint: consider $e^{x/2}f(x)$
+\end{frame}
+
+\begin{frame}{Putnam 2015 B1}
+\begin{soln}
+Let $g(x) = e^{x/2}f(x)$.\\\pause
+Then $g(x)$ has at least $5$ distinct zeros.\\\pause
+By Rolle's Theorem, $g'(x)$ has at least four distinct zeros.\\\pause
+By Rolle's Theorem, $g''(x)$ has at least three distinct zeros.\\\pause
+By Rolle's Theorem, $g'''(x)$ has at least two distinct zeros.\\\pause
+\pause
+\begin{align*}
+g'''(x)
+  & = e^{x/2}(\frac{1}{8}f(x) + \frac{6}{8}f'(x) + \frac{6}{4}f''(x) + f'''(x))\\
+  & = \frac{1}{8}e^{x/2}(f(x) + 6f'(x) + 12f''(x) + 8f'''(x))
+\end{align*}
+\pause
+$e^{x/2}$ is never zero, so the term in parentheses has two zeros!
+\end{soln}
+\end{frame}
+
+
+\begin{frame}{Putnam 1985 B1}
+\begin{prob}
+Suppose that
+$$f(x) = (x-m_1)(x-m_2)(x-m_3)(x-m_4)(x-m_5)$$
+for some distinct integers $m_1,\dots, m_5$.
+If we choose the values of these integers carefully, how many of the coefficients of $f(x)$ can we force to be zero?
+\end{prob}
+\pause
+\end{frame}
+
+\begin{frame}{Putnam 1985 B1}
+\begin{soln}
+$$f(x) = (x-m_1)(x-m_2)(x-m_3)(x-m_4)(x-m_5)$$
+\pause
+{\small
+\begin{align*}
+f(x)
+  &= x^5-(m_1+m_2+m_3+m_4+m_5)x^4\\
+  &+ (m_1m_2 + m_1m_3 + m_1m_4 + m_1m_5 + m_2m_3\\
+  &\quad\quad + m_2m_4 + m_2m_5 + m_3m_4 + m_3m_5 + m_4m_5)x^3\\
+  &- (m_1m_2m_3 + m_1m_2m_4 + m_1m_2m_5 + m_1m_3m_4 + m_1m_3m_5 \\
+  &\quad\quad + m_1m_4m_5 + m_2m_3m_4 + m_2m_3m_5 + m_2m_4m_5 + m_3m_4m_5)x^2\\
+  &+ (m_1m_2m_3m_4 + m_1m_2m_3m_5 + m_1m_2m_4m_5\\
+  &\quad\quad + m_1m_3m_4m_5 + m_2m_3m_4m_5)x - m_1m_2m_3m_4m_5
+\end{align*}
+}
+\end{soln}
+\end{frame}
+
+\begin{frame}{Putnam 1985 B1}
+\begin{soln}
+Take $m_5 = 0$: 
+{\small
+\begin{align*}
+f(x)
+  &= x^5-(m_1+m_2+m_3+m_4)x^4\\
+  &+ (m_1m_2 + m_1m_3 + m_1m_4  + m_2m_3 + m_2m_4 + m_3m_4)x^3\\
+  &- (m_1m_2m_3 + m_1m_2m_4 + m_1m_3m_4  +  m_2m_3m_4)x^2\\
+  & + m_1m_2m_3m_4x
+\end{align*}
+}
+\end{soln}
+\end{frame}
+
+\begin{frame}{Putnam 1985 B1}
+\begin{soln}
+Take $m_4 = -(m_1+m_2+m_3)$: 
+{\small
+\begin{align*}
+f(x)
+  &= x^5 + (m_1m_2 + m_1m_3  + m_2m_3 - (m_1+m_2+m_3)^2)x^3\\
+  &- (m_1m_2m_3 - (m_1m_2 + m_1m_3  +  m_2m_3)(m_1+m_2+m_3))x^2\\
+  & - m_1m_2m_3(m_1+m_2+m_3)x
+\end{align*}
+}
+\pause
+\vspace{-0.2in}
+{\small
+\begin{align*}
+f(x)
+  &= x^5 - (m_1m_2 + m_1m_3  + m_2m_3 + m_1^2+m_2^2+m_3^2)x^3\\
+  &+ (m_1m_2m_3 + m_1^2m_2 + m_1m_2^2 + m_1^2m_3 + m_1m_3^2 + m_2^2m_3  +  m_2m_3^2)x^2\\
+  & - m_1m_2m_3(m_1+m_2+m_3)x
+\end{align*}
+}
+\pause
+\vspace{-0.2in}
+{\small
+\begin{align*}
+f(x)
+  &= x^5 - (m_1m_2 + m_1m_3  + m_2m_3 + m_1^2+m_2^2+m_3^2)x^3\\
+  &+ (m_1+m_2)(m_1+m_3)(m_2+m_3)x^2\\
+  & - m_1m_2m_3(m_1+m_2+m_3)x
+\end{align*}
+}
+\end{soln}
+\end{frame}
+
+\begin{frame}{Putnam 1985 B1}
+\begin{soln}
+Take $m_3 = -m_2$: 
+$$f(x) = x^5 - (m_2^2 + m_1^2)x^3 + m_1^2m_2^2x$$
+\pause
+Final answer:
+$$m_3 = -m_2,\quad m_4=-m_1,\quad m_5 = 0.$$
+\pause
+$$f(x) = x(x-m_1)(x+m_1)(x-m_2)(x+m_2).$$
+\pause
+\textbf{Suspicion:} the answer is we can two coefficients be zero.\\
+\pause
+\textbf{Question:} can we have even more be zero???
+\end{soln}
+\end{frame}
+
+\begin{frame}{Putnam 1985 B1}
+\begin{soln}
+\begin{itemize}
+\pause
+\item Just one coefficient?\\
+\pause
+$$f(x) = x^5\quad\text{has repeated roots...impossible!}$$
+\pause
+\item Just two coefficients?\\
+\pause
+$$f(x) = x^5 + ax\quad\text{has complex roots...impossible!}$$
+\pause
+$$f(x) = x^5 + a\quad\text{has complex roots...impossible!}$$
+\end{itemize}
+\end{soln}
+\end{frame}
+\end{document}
+
+

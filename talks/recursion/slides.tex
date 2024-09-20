@@ -1,0 +1,208 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+% MODIFIED by Jonathan Kew, 2008-07-06
+% The header comments and encoding in this file were modified for inclusion with TeXworks.
+% The content is otherwise unchanged from the original distributed with the beamer package.
+
+\documentclass{beamer}
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage{hyperref}
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+
+\title{Recursion Problems}
+
+\author[W.R. Casper] % (optional, use only with lots of authors)
+{W.R. Casper\\\vspace{0.2in}
+ {\tiny Problem Solving Seminar}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[California State University Fullerton] % (optional, but mostly needed)
+{
+  Department of Mathematics\\
+  California State University Fullerton}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+  %\tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+% Since this a solution template for a generic talk, very little can
+% be said about how it should be structured. However, the talk length
+% of between 15min and 45min and the theme suggest that you stick to
+% the following rules:  
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+\begin{frame}{Recursive definition}
+\begin{center}
+\includegraphics[height=1in]{fig/xkcd-recursion}
+\end{center}
+Recursive definitions involves two things:
+\begin{itemize}
+\item a base case -- where the thing is defined explicitly
+\item a recursive step -- a rule which relates the next case to previous cases
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Putnam 1990 A1}
+Let $T_0 = 2, T_1 = 3, T_2 = 6$, and for $n \geq 3$,
+$$T_n = (n + 4)T_{n-1} - 4nT_{n-2} + (4n - 8)T_{n-3}.$$
+The first few terms are
+$$2, 3, 6, 14, 40, 152, 784, 5168, 40576, 363392$$
+Find, with proof, a formula for $T_n$ of the form $T_n = A_n+B_n$, where $(A_n)$ and $(B_n)$ are well-known sequences.
+\end{frame}
+\begin{frame}{Putnam 1990 A1}
+Let $T_0 = 2, T_1 = 3, T_2 = 6$, and for $n \geq 3$,
+$$T_n = (n + 4)T_{n-1} - 4nT_{n-2} + (4n - 8)T_{n-3}.$$
+The first few terms are
+$$2, 3, 6, 14, 40, 152, 784, 5168, 40576, 363392$$
+Find, with proof, a formula for $T_n$ of the form $T_n = A_n+B_n$, where $(A_n)$ and $(B_n)$ are well-known sequences.\\
+{\color{red}Hint: compare to the first few terms of the sequence $n!$
+$$1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880$$}
+\end{frame}
+
+
+\begin{frame}{Fibonacci Sequence}
+\begin{itemize}
+\item Base case:
+$$F_1 = 1,\ \ F_2 = 1,$$
+\item Recursive step:
+$$F_{n+1} = F_n + F_{n-1},\ \ n\geq 2$$
+\end{itemize}
+$$F_3 = 2,\ \ F_4 = 3,\ \ F_5 = 5,\ \ F_6 = 8,\dots...$$ 
+\begin{center}
+\includegraphics[height=1in]{fig/fibonacci}
+\end{center}
+\end{frame}
+
+\begin{frame}{A closed form}
+Show that
+$$F_n = \frac{\varphi^n-(-\varphi)^{-n}}{\varphi+\varphi^{-1}},$$
+where here $\varphi$ is the \textbf{golden ratio}
+$$\varphi = \frac{1+\sqrt{5}}{2}.$$
+\end{frame}
+
+\begin{frame}{Practice again}
+Suppose that $u_0 = 0$, $u_1 = 1$ and 
+$$u_{n+2} = 4u_{n+1}-4u_n.$$
+Determine the value of $u_{16}$.
+\end{frame}
+
+\begin{frame}{Generalization}
+Suppose that $u_0, u_1$, and $u_2$ are three real numbers.
+Define recursively
+$$u_{n+2} = \frac{u_{n+1}+u_n+u_{n-1}}{3}.$$
+Determine the limit of $u_{n}$.
+\end{frame}
+
+\begin{frame}{Putnam 2015 A2}
+Suppose that $a_0 = 1, a_1 = 2$, and
+$$a_{n} = 4a_{n-1}-a_{n-2},\ \ n\geq 2.$$
+Determine an odd prime divisor of $a_{2015}$.
+\end{frame}
+
+\begin{frame}{Nonlinear recursion}
+Determine the value of the sequence $x_n$ satisfying $x_0 = 1$ and 
+$$x_n = 1 + 1/x_{n-1},\ \ \text{for}\ \ n > 0$$
+Doex $x_n$ converge?  If so, to what?
+\end{frame}
+
+\begin{frame}{Putnam 1993 A2}
+Let $z_0$ and $z_1$ be real numbers.
+Determine an explicit formula in terms of $z_0$ and $z_1$ for the value of
+$$z_{n}^2-z_{n+1}z_{n-1} = 1,\ \ n \geq 1.$$
+\end{frame}
+
+\end{document}
+
+
