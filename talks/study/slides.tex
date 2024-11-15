@@ -196,37 +196,58 @@ Strategies:
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Scratch work}
+\begin{frame}{Critical info}
 \textbf{Putnam 2016 A1}:\\
 Find the smallest integer $j$ such that for every polynomial $p(x)$ with integer coefficients
 $$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
 \end{frame}
 
-\begin{frame}{Scratch work}
+\begin{frame}{Critical info}
 \textbf{Putnam 2016 A1}:\\
 Find the smallest integer $j$ such that for every polynomial $p(x)$ with integer coefficients
 $$p^{(j)}(k)\ \ \text{is {\color{red} divisible by $2016$} for all integers $k$}.$$
 \end{frame}
 
-\begin{frame}{Scratch work}
+\begin{frame}{Critical info}
 \textbf{Putnam 2016 A1}:\\
 Find the smallest integer $j$ such that for {\color{red}every polynomial} $p(x)$ with integer coefficients
 $$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
 \end{frame}
 
-\begin{frame}{Scratch work}
+\begin{frame}{Critical info}
 \textbf{Putnam 2016 A1}:\\
 Find the smallest integer $j$ such that for every polynomial $p(x)$ with {\color{red} integer coefficients}
 $$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
 \end{frame}
 
-\begin{frame}{Scratch work}
+\begin{frame}{Critical info}
 \textbf{Putnam 2016 A1}:\\
 Find the {\color{red} smallest integer} $j$ such that for every polynomial $p(x)$ with integer coefficients
 $$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
 \end{frame}
 
-\begin{frame}{Scratch work}
+\begin{frame}{Classify the problem}
+Topics: polynomials, divisibility
+\pause
+important ideas/theorems
+\begin{itemize}
+\pause
+\item primes, modular arithmetic
+\pause
+\item derivatives of polynomials
+\pause
+\item \textbf{Fundamental Theorem of Arithmetic}:\\
+every positive integer may be written as a product of primes
+$$n=p_1p_2\dots p_r$$
+moreover, given another prime factorization
+$$n=q_1q_2\dots q_s$$
+then $r=s$ and the $p_j$'s and $q_j$'s are the same, after reordering
+\end{itemize}
+\pause
+Also, polynomials are linear combinations of \textbf{monomials}: $x^n$
+\end{frame}
+
+\begin{frame}{Classify the problem}
 Fundamental Theorem of Arithmetic:
 $$2016 = 2^53^27$$
 \pause
@@ -369,7 +390,17 @@ which is not divisible by $2016$, since it isn't divisible by $2^5$.\\
 \pause
 Therefore the answer is at least $8$.\\
 \pause
-To prove that $8$ is enough, we'll prove a Lemma.\\
+To prove that $8$ is enough, we'll prove two Lemmas.\\
+\end{frame}
+
+\begin{frame}{Writing up the solution}
+\textbf{Lemma}: If $n$ and $k$ are integers with $k>0$, then one of the integers\\
+\hfil $\{n-0,n-1,n-2,\dots,n-k+1\}$\\
+must be a multiple of $k$.
+\pause
+\textbf{Proof}:\\
+The value of $n$ modulo $k$, ie. the remainder of $n/k$, is an integer $r$ with $0\leq r \leq n-1$.\\
+Therefore $n-r$ will be $0$ modulo $k$, ie. it will be a multiple of $k$.
 \end{frame}
 
 \begin{frame}{Writing up the solution}
