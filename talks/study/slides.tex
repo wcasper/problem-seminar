@@ -1,0 +1,417 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+% MODIFIED by Jonathan Kew, 2008-07-06
+% The header comments and encoding in this file were modified for inclusion with TeXworks.
+% The content is otherwise unchanged from the original distributed with the beamer package.
+
+\documentclass{beamer}
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+%  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage{hyperref}
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+
+\title{Studying the Putnam}
+
+\author[W.R. Casper] % (optional, use only with lots of authors)
+{W.R. Casper\\\vspace{0.2in}
+ {\tiny Problem Solving Seminar}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[California State University Fullerton] % (optional, but mostly needed)
+{
+  Department of Mathematics\\
+  California State University Fullerton}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+  %\tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+% Since this a solution template for a generic talk, very little can
+% be said about how it should be structured. However, the talk length
+% of between 15min and 45min and the theme suggest that you stick to
+% the following rules:  
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+\begin{frame}{Introduction}
+What is the Putnam Exam?
+\pause
+\begin{itemize}
+\pause
+\item running since $1938$
+\pause
+\item any undergrad can take it! (max $4$ years)
+\pause
+\item first Saturday of December
+\pause
+\item morning session: 8AM-11AM (6 problems)
+\pause
+\item afternoon session: 1PM-4PM (6 more problems)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Benefits}
+Why take the Putnam?
+\begin{itemize}
+\pause
+\item bragging rights!
+\pause
+\item free lunch!
+\pause
+\item because I told you to
+\pause
+\item departmental scholarships
+\pause
+\item recommendation letters
+\pause
+\item not just for supergeniuses or the criminally insane
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Putnam practice}
+Getting Putnam practice
+\pause
+\begin{itemize}
+\pause
+\item MAA Mathematics Magazine
+\pause
+\item College Math Journal
+\pause
+\item American Math Monthly
+\pause
+\item old problems / solutions: also in the Monthly!
+\pause
+\item Kiran Kedlaya's website
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example problem}
+\textbf{Putnam 2016 A1}:\\
+Find the smallest integer $j$ such that for every polynomial $p(x)$ with integer coefficients
+$$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
+\end{frame}
+
+\begin{frame}{Strategy}
+Strategies:
+\pause
+\begin{itemize}
+\pause
+\item carefully read the problem
+\pause
+\item underline critical info
+\pause
+\item classify the problem: what topic of math?  what useful results?
+\pause
+\item try to explore \emph{specific cases}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scratch work}
+\textbf{Putnam 2016 A1}:\\
+Find the smallest integer $j$ such that for every polynomial $p(x)$ with integer coefficients
+$$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+\textbf{Putnam 2016 A1}:\\
+Find the smallest integer $j$ such that for every polynomial $p(x)$ with integer coefficients
+$$p^{(j)}(k)\ \ \text{is {\color{red} divisible by $2016$} for all integers $k$}.$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+\textbf{Putnam 2016 A1}:\\
+Find the smallest integer $j$ such that for {\color{red}every polynomial} $p(x)$ with integer coefficients
+$$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+\textbf{Putnam 2016 A1}:\\
+Find the smallest integer $j$ such that for every polynomial $p(x)$ with {\color{red} integer coefficients}
+$$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+\textbf{Putnam 2016 A1}:\\
+Find the {\color{red} smallest integer} $j$ such that for every polynomial $p(x)$ with integer coefficients
+$$p^{(j)}(k)\ \ \text{is divisible by $2016$ for all integers $k$}.$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+Fundamental Theorem of Arithmetic:
+$$2016 = 2^53^27$$
+\pause
+If $n$ is divisible by $2016$ then
+\begin{itemize}
+\pause
+\item $n$ is divisible by $2^5$
+\pause
+\item $n$ is divisible by $3^2$
+\pause
+\item $n$ is divisible by $2^7$
+\end{itemize}
+\pause
+Also, polynomials are linear combinations of \textbf{monomials}: $x^n$
+\end{frame}
+
+\begin{frame}{Scratch work}
+\begin{align*}
+f(x) &= x\\
+f'(k) &= 1\\
+f''(k) &= 0\\
+f'''(k) &= 0\\
+f''''(k) &= 0\\
+\end{align*}
+\end{frame}
+
+\begin{frame}{Scratch work}
+\begin{align*}
+f(x) &= x^2\\
+f'(k) &= 2k\\
+f''(k) &= 2\\
+f'''(k) &= 0\\
+f''''(k) &= 0\\
+\end{align*}
+\end{frame}
+
+\begin{frame}{Scratch work}
+\begin{align*}
+f(x) &= x^3\\
+f'(k) &= 3k^2\\
+f''(k) &= 6k\\
+f'''(k) &= 6\\
+f''''(k) &= 0\\
+\end{align*}
+\end{frame}
+
+\begin{frame}{Scratch work}
+\begin{align*}
+f(x) &= x^4\\
+f'(k) &= 4k^3\\
+f''(k) &= 12k^2\\
+f'''(k) &= 24k\\
+f''''(k) &= 24\\
+\end{align*}
+\end{frame}
+
+\begin{frame}{Scratch work}
+\begin{align*}
+f(x) &= x^{29}\\
+f'(k) &= 29k^{28}\\
+f''(k) &= 29\cdot 28k^{27}\\
+f'''(k) &= 29\cdot 28\cdot 27 k^{26}\\
+f''''(k) &= 29\cdot 28\cdot 27\cdot 26 k^{25}
+\end{align*}
+How long until divisible by 2016?
+\end{frame}
+
+\begin{frame}{Scratch work}
+We need five $2$'s, two $3$'s and a $7$:
+$$f^{(5)}(k) = 29\cdot 28\cdot 27\cdot 26\cdot 25 k^{24}$$
+\pause
+\begin{itemize}
+\pause
+\item $28$ has a $7$ and two $2$'s
+\pause
+\item $27$ has three $3$'s
+\pause
+\item $26$ has a $2$
+\pause
+\item $24$ has three $2$'s
+\end{itemize}
+\pause
+Go one more to get a $2$:
+$$f^{(6)}(k) = 29\cdot 28\cdot 27\cdot 26\cdot 25\cdot 24 k^{23}$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+Almost-worst case scenario: we might to do seven derivatives to get a $7$:
+\pause
+$$f(x) = x^{27}$$
+\pause
+$$f^{(6)}(k) = 27\cdot 26\cdot 25\cdot 24\cdot 23\cdot 22 k^{21}$$
+\pause
+$$f^{(7)}(k) = 27\cdot 26\cdot 25\cdot 24\cdot 23\cdot 22\cdot 21 k^{20}$$
+\end{frame}
+
+\begin{frame}{Scratch work}
+Worst case scenario: we might have to do an eighth derivative to get enough $2$'s:
+\pause
+$$f(x) = x^{8\cdot 7-1} = x^{55}$$
+\pause
+$$f^{(7)}(k) = 55\cdot 54\cdot 53\cdot 52\cdot 51\cdot 50\cdot 49 k^{48}$$
+\pause
+\hfil This doesn't have enough $2$'s!
+\pause
+$$f^{(8)}(k) = 55\cdot 54\cdot 53\cdot 52\cdot 51\cdot 50\cdot 49\cdot 48  k^{47}$$
+\end{frame}
+
+\begin{frame}{Writing up the solution}
+\begin{itemize}
+\pause
+\item Good writing is important!
+\pause
+\item ALWAYS write the answer first
+\pause
+\item Carefully explain any unusual notation
+\pause
+\item Emphasize any theorems you are using
+\pause
+\item Emphasize key points
+\pause
+\item Break up your solution into manageable pieces with Lemmas
+\pause
+\item Double-check you answered the original question!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Writing up the solution}
+\textbf{Solution}:\\
+\pause
+The answer is $8$.\\
+\pause
+To see this, our primary tool is the Fundamental Theorem of Arithmetic, which says each integer has a unique prime factorization (up to reordering).\\
+\pause
+Since $2016 = 2^5\cdot 3^2\cdot 7$, this means divisibility by $2016$ is the same as divisibility by $2^5$, $3^2$, and $7$ all at once.\\
+\pause
+Now, for $f(x) = x^{55}$ we can calculate
+$$f^{(7)}(1) = 55\cdot 54\cdot 53\cdot 52\cdot 51\cdot 50\cdot 49,$$
+which is not divisible by $2016$, since it isn't divisible by $2^5$.\\
+\pause
+Therefore the answer is at least $8$.\\
+\pause
+To prove that $8$ is enough, we'll prove a Lemma.\\
+\end{frame}
+
+\begin{frame}{Writing up the solution}
+\textbf{Lemma}: If $n\geq 0$ is an integer and $f(x) = x^n$, then $f^{(j)}(k)$ is divisible by $2016$, for any integers $j$ and $k$ with $j\geq 8$.\\
+\pause
+\textbf{Proof}:\\
+\pause
+\hfil $f^{(8)}(x) = n(n-1)(n-2)(n-3)(n-4)(n-5)(n-6)(n-7)x^{n-8},$
+\pause
+and therefore for any integers $j$ and $k$ with $j\geq 8$, $f^{(j)}(k)$ will be a multiple of\\
+\hfil $N = n(n-1)(n-2)(n-3)(n-4)(n-5)(n-6)(n-7).$
+\pause
+Consider the numbers
+\hfil $\{n,n-1,n-2,n-3,n-4,n-5,n-6,n-7\}.$
+\pause
+At least four of the above numbers must be even, and therefore divisible by $2$. 
+\pause
+Actually, one must be a multiple of $4$!
+\pause
+Likewise, at least $2$ will be multiples of $3$. 
+\pause
+Finally, one of the numbers will be a multiple of $7$. 
+\pause
+Hence $N$ and $f^{(j)}(k)$ is divisible by $2016$.
+\end{frame}
+
+\begin{frame}{Writing up the solution}
+To finish our solution, note that any polynomial will be of the form
+$$f(x) = a_0 + a_1x + a_2x^2 + a_nx^n$$
+for some integers $a_0,\dots, a_n$.\\
+\pause
+By our Lemma, when we take the $j$'th derivative for $j\geq 8$, each of the powers of $x$ becomes a multiple of $2016$.\\
+\pause
+This makes $f^{(j)}(k)$ a linear combination of multiples of $2016$, and therefore also a multiple of $2016$.
+\end{frame}
+
+\begin{frame}{Example problem}
+\textbf{Try it yourself!}:\\
+Find the smallest integer $j$ such that for every polynomial $p(x)$ with integer coefficients
+$$p^{(j)}(k)\ \ \text{is divisible by $2024$ for all integers $k$}.$$
+\end{frame}
+
+\end{document}
+
+
