@@ -17,6 +17,8 @@ title: CSUF Problem Solving Seminar
 
 **Training Schedule:** [Link to training schedule](/training)
 
+Interested in training together?  **Email me!**
+
 
 The CSUF Problem Solving Seminar traditionally engages our interested
 undergraduate students as they prepare for the William Lowell Putnam
