@@ -15,9 +15,8 @@ title: CSUF Problem Solving Seminar
 
 **Talk Schedule:** [Link to talk schedule](https://www.fullerton.edu/math/seminars/Problem%20Seminar.php)
 
-**Zoom link:** Talks are in person, but we are currently testing streaming the seminar.  Join **933-919-1166** to view the stream.
+**Training Schedule:** [Link to talk schedule](/training)
 
-**Introduction:**
 
 The CSUF Problem Solving Seminar traditionally engages our interested
 undergraduate students as they prepare for the William Lowell Putnam
