@@ -15,7 +15,7 @@ title: CSUF Problem Solving Seminar
 
 **Talk Schedule:** [Link to talk schedule](https://www.fullerton.edu/math/seminars/Problem%20Seminar.php)
 
-**Training Schedule:** [Link to talk schedule](/training)
+**Training Schedule:** [Link to training schedule](problem-seminar/training)
 
 
 The CSUF Problem Solving Seminar traditionally engages our interested
