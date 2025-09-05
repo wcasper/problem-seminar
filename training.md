@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Training Schedule
-permalink: training
+permalink: /training/
 ---
 
 The following is a suggested twelve week training schedule to prepare for the Putnam Exam using the textbook
