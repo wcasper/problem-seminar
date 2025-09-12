@@ -37,7 +37,7 @@
   \usetheme{Warsaw}
   % or ...
 
-  \setbeamercovered{transparent}
+  %\setbeamercovered{transparent}
   % or whatever (possibly just delete it)
 }
 
@@ -125,13 +125,29 @@
 
 \begin{frame}{Recursive definition}
 \begin{center}
-\includegraphics[height=1in]{fig/xkcd-recursion}
+\includegraphics[height=2in]{fig/xkcd-recursion}
 \end{center}
 Recursive definitions involves two things:
 \begin{itemize}
 \item a base case -- where the thing is defined explicitly
 \item a recursive step -- a rule which relates the next case to previous cases
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Fibonacci Sequence}
+\begin{itemize}
+\item Base case:
+$$F_0 = 0,\ \ F_1 = 1,$$
+\pause
+\item Recursive step:
+$$F_{n+2} = F_{n+1} + F_{n},\ \ n\geq 0$$
+\end{itemize}
+\pause
+$$F_2 = 1,\ \ F_3 = 2,\ \ F_4 = 3,\ \ F_5 = 5,\ \ F_6 = 8,\dots...$$ 
+\pause
+\begin{center}
+\includegraphics[height=1in]{fig/fibonacci}
+\end{center}
 \end{frame}
 
 \begin{frame}{Putnam 1990 A1}
@@ -151,31 +167,205 @@ Find, with proof, a formula for $T_n$ of the form $T_n = A_n+B_n$, where $(A_n)$
 $$1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880$$}
 \end{frame}
 
-
-\begin{frame}{Fibonacci Sequence}
-\begin{itemize}
-\item Base case:
-$$F_1 = 1,\ \ F_2 = 1,$$
-\item Recursive step:
-$$F_{n+1} = F_n + F_{n-1},\ \ n\geq 2$$
-\end{itemize}
-$$F_3 = 2,\ \ F_4 = 3,\ \ F_5 = 5,\ \ F_6 = 8,\dots...$$ 
-\begin{center}
-\includegraphics[height=1in]{fig/fibonacci}
-\end{center}
+\begin{frame}{Linear with constant coefficients}
+Special case:
+$$u_{n+2} = au_{n+1} + bu_n,\quad n\geq 0.$$
+\pause
+$$u_2 = au_1 + bu_0$$
+\pause
+$$u_3 = a(au_1 + bu_0) + bu_1 = (a^2+b)u_1 + abu_0$$
+\pause
+$$u_4 = (a^3+2ab)u_1 + (a^2b + b^2)u_0$$
 \end{frame}
 
-\begin{frame}{A closed form}
-Show that
-$$F_n = \frac{\varphi^n-(-\varphi)^{-n}}{\varphi+\varphi^{-1}},$$
-where here $\varphi$ is the \textbf{golden ratio}
-$$\varphi = \frac{1+\sqrt{5}}{2}.$$
+\begin{frame}{Linear with constant coefficients}
+Linearize:
+$$\left[\begin{array}{c}u_{n+1}\\u_{n+2}\end{array}\right] = \left[\begin{array}{cc}
+0 & 1\\
+b & a
+\end{array}\right] \left[\begin{array}{c}u_n\\u_{n+1}\end{array}\right]$$
+\pause
+If we let
+$$\quad A = \left[\begin{array}{c}u_{n+1}\\u_{n+2}\end{array}\right] = \left[\begin{array}{cc}
+0 & 1\\
+b & a
+\end{array}\right],\quad \vec u_n = \left[\begin{array}{c}u_n\\u_{n+1}\end{array}\right]$$
+\pause
+$$\vec u_{n+1} = A\vec u_n$$
+\pause
+$$\vec u_{n} = A\vec u_{n-1} = A(A\vec u_{n-2}) = A(A(A\vec u_{n-2})) = \dots$$
+\pause
+$$\vec u_n = A^n\vec u_0$$
+\end{frame}
+
+\begin{frame}{Fibonacci again}
+$$F_{n+2} = F_{n+1} + F_{n},\ \ n\geq 0$$
+\pause
+$$\left[\begin{array}{c}F_{n+1}\\F_{n+2}\end{array}\right] = \left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right] \left[\begin{array}{c}F_n\\F_{n+1}\end{array}\right]$$
+\pause
+$$\left[\begin{array}{c}F_n\\F_{n+1}\end{array}\right] = 
+\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^n
+\left[\begin{array}{c}F_0\\F_1\end{array}\right]
+$$
+\end{frame}
+
+\begin{frame}{Powers of Frobenius matrix}
+\pause
+$$\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^0 = \left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]$$
+\pause
+$$\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^1 = \left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]$$
+\pause
+$$\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^2 = \left[\begin{array}{cc}
+1 & 1\\
+1 & 2
+\end{array}\right]$$
+\pause
+$$\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^3 = \left[\begin{array}{cc}
+1 & 1\\
+1 & 2
+\end{array}\right]
+\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right] = \left[\begin{array}{cc}
+1 & 2\\
+2 & 3
+\end{array}\right]
+$$
+\pause
+$$\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^4 = \left[\begin{array}{cc}
+1 & 2\\
+2 & 3
+\end{array}\right]
+\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right] = \left[\begin{array}{cc}
+2 & 3\\
+3 & 5
+\end{array}\right]
+$$
+\end{frame}
+
+\begin{frame}{Fast Powers}
+\begin{block}{Question:}
+What about
+$\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]^{10}?$
+\end{block}
+\pause
+Will take forever without tricks...\\
+\pause
+Let
+$$A = \left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right]$$
+\pause
+\begin{block}{Observation:}
+$$A^2 - A^1 - I = \left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]$$
+\end{block}
+\end{frame}
+
+\begin{frame}{Fast Powers}
+Polynomial long division:\\
+{\small
+$$\frac{x^{10}}{x^2-x-1} = 
+x^8 + x^7 + 2 x^6 + 3 x^5 + 5 x^4 + 8 x^3 + 13 x^2 +  21 x + 34 + \frac{55 x + 34}{x^2 - x - 1}$$
+}
+\pause
+$$x^{10} = (x^8 + x^7 + \dots + 21x + 34)(x^2-x-1) + 55x + 34$$
+\pause
+$$A^{10} = (A^8 + A^7 + \dots + 21A + 34I)(A^2-A^1-I) + 55A + 34I$$
+\pause
+$$A^{10} = \left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right] + 55\left[\begin{array}{cc}
+0 & 1\\
+1 & 1
+\end{array}\right] + 34\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right] = \left[\begin{array}{cc}
+34 & 55\\
+55 & 89
+\end{array}\right]$$
+\end{frame}
+
+\begin{frame}{Faster Powers}
+Only the polynomial remainder mattered!
+\pause
+\begin{block}{Question:}
+Can we get the remainder \textbf{faster}?
+\end{block}
+\pause
+$$x^{10} = (x^2-x-1)^2\cdot\text{poly} + cx + d$$
+\pause
+Roots of $x^2-x-1$ are $\varphi_+ = \frac{1+\sqrt{5}}{2}$ and $\varphi_- =  \frac{1-\sqrt{5}}{2}$
+\pause
+$$\varphi_+^{10} =  c\varphi_+ + d$$
+$$\varphi_-^{10} =  c\varphi_- + d$$
+\pause
+$$c = \frac{\varphi_+^{10}-\varphi_-^{10}}{\varphi_+-\varphi_-} = 55,\quad d = \frac{\varphi_+^{10}-\varphi_-^{10}}{\varphi_+-\varphi_-} = 34$$
+\end{frame}
+
+\begin{frame}{Fibonacci closed form}
+\pause
+$$x^n = (x^2-x-1)^2\cdot\text{poly} + cx + d$$
+\pause
+$$\varphi_+^{n} =  c\varphi_+ + d$$
+$$\varphi_-^{n} =  c\varphi_- + d$$
+\pause
+$$c = \frac{\varphi_+^{n}-\varphi_-^{n}}{\varphi_+-\varphi_-},\quad d = \frac{\varphi_+^{n-1}-\varphi_-^{n-1}}{\varphi_+-\varphi_-}$$
+\pause
+$$A^n = \frac{\varphi_+^{n}-\varphi_-^{n}}{\varphi_+-\varphi_-}A + \frac{\varphi_+^{n-1}-\varphi_-^{n-1}}{\varphi_+-\varphi_-}I$$
+\pause
+$$F_n = \frac{\varphi_+^n - \varphi_-^n}{\varphi_+-\varphi_-}.$$
 \end{frame}
 
 \begin{frame}{Practice again}
 Suppose that $u_0 = 0$, $u_1 = 1$ and 
 $$u_{n+2} = 4u_{n+1}-4u_n.$$
 Determine the value of $u_{16}$.
+\end{frame}
+
+\begin{frame}{Putnam 2015 A2}
+Suppose that $a_0 = 1, a_1 = 2$, and
+$$a_{n} = 4a_{n-1}-a_{n-2},\ \ n\geq 2.$$
+Determine an odd prime divisor of $a_{2015}$.
 \end{frame}
 
 \begin{frame}{Generalization}
@@ -185,24 +375,13 @@ $$u_{n+2} = \frac{u_{n+1}+u_n+u_{n-1}}{3}.$$
 Determine the limit of $u_{n}$.
 \end{frame}
 
-\begin{frame}{Putnam 2015 A2}
-Suppose that $a_0 = 1, a_1 = 2$, and
-$$a_{n} = 4a_{n-1}-a_{n-2},\ \ n\geq 2.$$
-Determine an odd prime divisor of $a_{2015}$.
-\end{frame}
-
-\begin{frame}{Nonlinear recursion}
-Determine the value of the sequence $x_n$ satisfying $x_0 = 1$ and 
-$$x_n = 1 + 1/x_{n-1},\ \ \text{for}\ \ n > 0$$
-Doex $x_n$ converge?  If so, to what?
-\end{frame}
-
 \begin{frame}{Putnam 1993 A2}
 Let $z_0$ and $z_1$ be real numbers.
 Consider the sequence of real numbers defined recursively by
 $$z_{n}^2-z_{n+1}z_{n-1} = 1,\ \ n \geq 1.$$
 Show that there is a constant $a\in \mathbb R$ with
 $$z_{n+1} + z_{n-1} = az_n,\ \ n\geq 1$$
+Can you find an explicit expression for $z_n$?
 \end{frame}
 
 \end{document}
